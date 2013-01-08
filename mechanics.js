@@ -6,7 +6,7 @@ function setupNotes() {
 		var note = $(keys)[i];
 		note = $(note).attr("id");
 		var noteId = "s" + soundStack;
-		var soundObj = "<audio id='" + noteId + "' preload><source src='wavs/" + note + ".wav' type='audio/wav'>Your browser does not support the audio element.</audio>";
+		var soundObj = "<audio id='" + noteId + "' preload='auto'><source src='wavs/" + note + ".wav' type='audio/wav'>Your browser does not support the audio element.</audio>";
 		manageStack();
 		$("body").append(soundObj);
 	}
