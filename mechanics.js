@@ -5,14 +5,10 @@ function setupNotes() {
 	for(var i = 0; i < keys.length; i++) {
 		var note = $(keys)[i];
 		note = $(note).attr("id");
-		var noteId = "s" + soundStack;
+		var noteId = "pl" + i;
 		var soundObj = "<audio id='" + noteId + "' preload='auto'><source src='wavs/" + note + ".wav' type='audio/wav'>Your browser does not support the audio element.</audio>";
-		manageStack();
 		$("body").append(soundObj);
 	}
-	$(document).ready(function(e) {
-        $("audio").remove();
-    });
 }
 
 function play(target) {
